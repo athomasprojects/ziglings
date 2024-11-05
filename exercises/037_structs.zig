@@ -33,9 +33,11 @@ const Role = enum {
 // Please add a new property to this struct called "health" and make
 // it a u8 integer type.
 const Character = struct {
+    // zig fmt: off
     role: Role,
     gold: u32,
     experience: u32,
+    health: u8
 };
 
 pub fn main() void {
@@ -44,6 +46,7 @@ pub fn main() void {
         .role = Role.wizard,
         .gold = 20,
         .experience = 10,
+        .health = 100
     };
 
     // Glorp gains some gold.
